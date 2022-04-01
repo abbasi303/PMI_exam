@@ -3,8 +3,21 @@ import org.junit.Test;
 import static org.junit.Assert.assertEquals;
 
 public class BankTest {
+    class BankAccount {
+        private int balance;
+        private String accNum;
+        public BankAccount(String a) {
+            accNum = a;
+            balance = 0;
+        } //constructor
+        public void deposit(int amount) {
+            balance = balance + amount;
+        } // deposit
+        public int getBalance() {
+            return balance;
+        } // getBalance
+    } // BankAccount
 
-    /*
     @Test
     public void testOpenNewAccount() {
         Bank bank = new Bank();
@@ -52,5 +65,6 @@ public class BankTest {
         assertEquals(accountNumber1 + " " + amount1 + "\r\n" + accountNumber2 + " " + amount2,
                 moneyTransfer.getBalances());
     }
-    */
+*/
 }
+
